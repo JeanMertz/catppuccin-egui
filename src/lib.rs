@@ -31,7 +31,7 @@
 use egui::{epaint, style, Color32};
 
 /// Apply the given theme to a [`Context`](egui::Context).
-pub fn set_theme(ctx: &egui::Context, theme: Theme) {
+pub fn set_theme(ctx: &mut egui::Context, theme: Theme) {
     let old = ctx.style().visuals.clone();
     ctx.set_visuals(theme.visuals(old));
 }
